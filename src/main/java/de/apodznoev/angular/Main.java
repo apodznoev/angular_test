@@ -24,8 +24,7 @@ public class Main extends GuiceServletContextListener {
         return Guice.createInjector( new ServletModule() {
             @Override
             protected void configureServlets() {
-                bind( new TypeLiteral<Dao<String>>() {
-                } ).to( StuffDao.class );
+                bind(new TypeLiteral<Dao<String>>() {}).to(StuffDao.class);
 
                 for ( Class<?> resource : rc.getClasses() ) {
                     System.out.println( "Binding resource: " + resource.getName() );

@@ -1,0 +1,23 @@
+apply plugin: 'java'
+
+// In this section you declare where to find the dependencies of your project
+repositories {
+    // Use jcenter for resolving your dependencies.
+    // You can declare any Maven/Ivy/file repository here.
+    jcenter()
+}
+
+dependencies {
+    // The production code uses Guava
+    compile 'com.google.guava:guava:20.0'
+    compile 'com.google.inject:guice:4.0'
+    compile 'com.google.inject.extensions:guice-servlet:4.0'
+    compile 'com.google.inject.extensions:guice-persist:4.0'
+    compile 'javax.servlet:servlet-api:2.5'
+    compile 'com.sun.jersey:jersey-server:1.17.1'
+    compile 'com.sun.jersey:jersey-client:1.17.1'
+
+    testCompile 'com.sun.jersey:jersey-grizzly2:1.17.1'
+    testCompile 'junit:junit:4.12'
+}
+
